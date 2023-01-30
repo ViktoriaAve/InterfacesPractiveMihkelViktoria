@@ -1,9 +1,9 @@
 package Interfaces;
 
 public interface CanCommunicate {
-    void bark();
-    void sing();
-    void buzz();
-
-
+    public static void bark() {
+        System.out.println("Grrr!!!");
+    }
+    public void sing();
+    public void buzz();
 }

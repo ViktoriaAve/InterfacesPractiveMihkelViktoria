@@ -1,24 +1,29 @@
 package Interfaces;
 
-public abstract class Crocodile extends Animal implements CanCommunicate, CanSwim, CanWalk  {
+public class Dog extends Animals implements CanCommunicate  {
+    private double height;
+    public Dog(int age, int weight, String color, int numberOfLegs, boolean hasATail, boolean hasFur, double height) {
+        super(age, weight, color, numberOfLegs, hasATail, hasFur);   }
 
-public Crocodile(int legs, int wings, boolean breath, String color) {
-    super(legs, wings, breath, color);
-}
 
-    @Override
-    public void bark() {
-        System.out.println("GAF GAF!!!!!!!");
+    public static void bark() {
+        System.out.println("Hi, I am a dog. Gaff!");
     }
 
     @Override
-    public void CanScubadive() {
-        System.out.println("Can dive deep into the water");
+    public void sing() {
+
     }
 
     @Override
-    public void canWalkOnTwoLegs() {
-        System.out.println("Can walk fast");
+    public void buzz() {
 
     }
+
+    public void getInfo(){
+        if (hasFur == true) {
+            System.out.println("This dog has fur");
+        }
+    };
+
 }
